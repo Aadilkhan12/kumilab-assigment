@@ -1,0 +1,125 @@
+.ProductContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 130px;
+}
+.allElements {
+  width: 84%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 16%;
+  position: fixed;
+  overflow-x:hidden;
+}
+.allElements::-webkit-scrollbar {
+  display: none;
+}
+
+.allElements::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.allElements::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 177, 238);
+  border-radius: 25%;
+}
+
+.sidebar {
+  display: flex;
+  width: 14%;
+  height: 800px;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin-top: 20px;
+  position: fixed;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 177, 238);
+  border-radius: 25%;
+}
+
+button {
+  margin: 1px;
+  padding: 5px 19px;
+  display: flex;
+  justify-content:left;
+  align-items:center;
+  width: 100%;
+  height: 60px;
+  border-radius: 10%;
+  font-weight: bold;
+  border: solid #fff;
+  background-color: #fff;
+  font-size: inherit;
+  text-align: inherit;
+}
+
+button:focus{
+  background-color: rgb(135, 215, 255);
+  color: white;
+}
+
+.mobileView {
+  display: none;
+  height: 50px;
+  width: 50px;
+  margin-left: 16px;
+  padding-left: 8px;
+  background-color: rgb(215, 215, 215);
+  border-radius: 5px;
+  /* box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2); */
+}
+
+@media only screen and (max-width: 600px) {
+  .ProductContainer {
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+  }
+
+  .allElements {
+    left: 2%;
+    top: 200px;
+    width: 100%;
+  }
+
+  .mobileView {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  button {
+    margin: 10px 10px;
+    padding: 0px;
+    height: 21px;
+    font-size: small;
+    color: rgb(126, 126, 126);
+  }
+  button:focus {
+    color: rgb(56, 139, 255);
+    background-color: white;
+  }
+}
